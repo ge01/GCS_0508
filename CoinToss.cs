@@ -11,8 +11,8 @@ namespace program_0508
         static void Main(string[] args)
         {
             // Variables
-            int sideUp;     // To indicate which side is up
-            char again = 'y';     // Loop again? Y or N
+            int sideUp;             // To indicate which side is up
+            char again = 'y';       // Loop again? Y or N
 
             // Create a Random object
             Random rand = new Random();
@@ -31,7 +31,7 @@ namespace program_0508
                 }
                 else
                 {
-                    // Display head up
+                    // Display heads up
                     Console.WriteLine("Heads");
                 }
 
