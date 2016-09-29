@@ -10,28 +10,36 @@ namespace program_0508
     {
         static void Main(string[] args)
         {
-            // Variable to indicate which side is up
-            int sideUp;
+            // Variables
+            int sideUp;     // To indicate which side is up
+            char again = 'y';     // Loop again? Y or N
 
             // Create a Random object
             Random rand = new Random();
 
-            // Get a random integer in the range of 0 through 1
-            // 0 means tails up, 1 means head up
-            sideUp = rand.Next(2);
+            do
+            {
+                // Get a random integer in the range of 0 through 1
+                // 0 means tails up, 1 means head up
+                sideUp = rand.Next(2);
 
-            // Display the side that is up
-            if (sideUp == 0)
-            {
-                // Display tails up
-                Console.WriteLine("Tails");
-            }
-            else
-            {
-                // Display head up
-                Console.WriteLine("Heads");
-            }
-            Console.ReadLine();
+                // Display the side that is up
+                if (sideUp == 0)
+                {
+                    // Display tails up
+                    Console.WriteLine("Tails");
+                }
+                else
+                {
+                    // Display head up
+                    Console.WriteLine("Heads");
+                }
+
+                // Does the user want to run the simulation again
+                Console.Write("Do you want to try again? (Y/N): ");
+                again = Char.Parse(Console.ReadLine());
+            } while (again == 'Y' || again == 'y');
+
         }
     }
 }
